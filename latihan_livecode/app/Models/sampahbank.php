@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class sampahbank extends Model
 {
+    use HasFactory;
+
     protected $table = 'sampah_bank';
     protected $primaryKey = 'id';
     public $incrementing = false;

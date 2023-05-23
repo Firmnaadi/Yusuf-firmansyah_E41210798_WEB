@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('bank_sampah', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->timestamp('tanggal');
             $table->string('name');
-            $table->string('kategori');
-            $table->string('point');
+            $table->enum('kategori', ['basah', 'kering']);
             $table->string('berat');
         });
     }
